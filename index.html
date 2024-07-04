@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="Css/style.css" />
+    <link rel="stylesheet" href="Css/mediaqueries.css" />
+    <link rel="stylesheet" href="Css/all.min.css" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -17,6 +18,16 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li>
+            <label class="switch">
+              <input
+                type="checkbox"
+                onclick="toggleDarkMode()"
+                id="dark-mode-toggle"
+              />
+              <span class="slider"></span>
+            </label>
+          </li>
         </ul>
       </div>
     </nav>
@@ -33,6 +44,17 @@
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li>
+            <a href="#">
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  onclick="toggleDarkMode()"
+                  id="dark-mode-toggle"
+                />
+                <span class="slider"></span> </label
+            ></a>
+          </li>
         </div>
       </div>
     </nav>
@@ -57,10 +79,10 @@
         </div>
         <div id="socials-container">
           <a href="https://github.com/Ziad-Nagah48">
-            <img src="./assets/github.png" alt="" />
+            <i class="fa-brands fa-github"></i>
           </a>
           <a href="https://www.linkedin.com/in/ziad-nagah-44b95b265/">
-            <img src="./assets/linkedin.png" alt="" />
+            <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
       </div>

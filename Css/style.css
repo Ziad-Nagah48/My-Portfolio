@@ -7,6 +7,154 @@
   padding: 0;
 }
 
+/* Dark Mode */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.dark-mode input:checked + .slider {
+  background-color: gray;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* استخدم هذه لتخصيص مظهر الزر و التبديل */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode nav,
+.dark-mode .nav-links a {
+  color: #ffffff;
+}
+#dark-mode-icon {
+  margin-left: 0.5rem; /* تعديل المسافة بين النص والأيقونة */
+  font-size: 0.8em; /* حجم الخط للأيقونة */
+}
+
+.dark-mode .logo:hover {
+  cursor: default;
+}
+
+.dark-mode .hamburger-icon span {
+  background-color: #ffffff;
+}
+
+.dark-mode .menu-links {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .menu-links a {
+  color: #ffffff;
+}
+.dark-mode a i {
+  font-size: 30px;
+  color: white;
+}
+.dark-mode a {
+  color: white;
+}
+.dark-mode h2 {
+  color: white;
+}
+.dark-mode .section__text p {
+  color: #dddd;
+}
+.dark-mode .btn-color-1,
+.dark-mode .btn-color-2 {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.dark-mode .btn-color-1:hover,
+.dark-mode .btn-color-2:hover {
+  background: #ffffff;
+  color: #121212;
+}
+
+.dark-mode .btn-color-1:hover {
+  border-color: #121212;
+}
+
+.dark-mode .btn-color-2 {
+  background: none;
+}
+
+.dark-mode .btn-color-2:hover {
+  border-color: #ffffff;
+}
+
+.dark-mode footer {
+  color: #ffffff;
+}
+
+.dark-mode footer a {
+  color: #ffffff;
+}
+
+.dark-mode .contact-info-container p {
+  color: #ffffff;
+}
+
+.dark-mode .contact-info-container .icon {
+  filter: invert(1);
+}
+
+.dark-mode .contact-info-container .email-icon {
+  height: 2.5rem;
+}
+
+.dark-mode .contact-info-upper-container {
+  border-color: #ffffff;
+  background: #1e1e1e;
+}
+.dark-mode .details-container {
+  background-color: #1e1e1e;
+}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -16,7 +164,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: rgb(149, 144, 144);
 }
 
 /* TRANSITION */
@@ -168,8 +316,8 @@ section {
   gap: 5rem;
   height: 80vh;
 }
-a img {
-  width: 40px;
+a i {
+  font-size: 30px;
 }
 
 .section__pic-container {
