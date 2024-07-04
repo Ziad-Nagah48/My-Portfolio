@@ -1,0 +1,13 @@
+@media screen and (max-width: 1200px) {
+  #dekstop-nav {
+    display: none;
+  }
+  #burger-nav {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #burger-nav {
+    display: none;
+  }
+}
